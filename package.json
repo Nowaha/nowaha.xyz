@@ -11,6 +11,7 @@
         "build:static": "node scripts/build-static.js",
         "watch:static": "node scripts/build-static.js --watch",
         "build:ts": "tsc",
+        "watch:ts": "tsc --watch",
         "build:css": "npx @tailwindcss/cli -i ./public/css/index.css -o ./out/public/css/index.css",
         "watch:css": "npx @tailwindcss/cli -i ./public/css/index.css -o ./out/public/css/index.css --watch"
     },
