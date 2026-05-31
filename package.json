@@ -15,6 +15,7 @@
         "watch:css": "npx @tailwindcss/cli -i ./public/css/index.css -o ./out/public/css/index.css --watch"
     },
     "devDependencies": {
+        "@catppuccin/tailwindcss": "^1.0.0",
         "@eslint/js": "^10.0.1",
         "@tailwindcss/cli": "^4.3.0",
         "chokidar": "^5.0.0",

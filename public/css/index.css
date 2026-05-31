@@ -1,1 +1,52 @@
 @import "tailwindcss";
+@import "@catppuccin/tailwindcss/mocha.css";
+
+:root {
+    --mauve-r: 203;
+    --mauve-g: 166;
+    --mauve-b: 247;
+}
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0.375turn,
+        transparent,
+        rgba(var(--mauve-r), var(--mauve-g), var(--mauve-b), 1) 20px,
+        transparent 40px,
+        transparent 60px
+    );
+    mask-image: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.01) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.2));
+    animation:
+        bg-fade 5s ease-in-out infinite,
+        bg-slide 2s linear infinite;
+    left: -85px;
+    right: -85px;
+}
+
+@keyframes bg-fade {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes bg-slide {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -85px;
+    }
+}
