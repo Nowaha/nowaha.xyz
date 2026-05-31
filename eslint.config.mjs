@@ -1,0 +1,11 @@
+// @ts-check
+
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
+
+export default defineConfig([
+    { files: ["src/**/*.{js,mjs,cjs,ts,mts,cts}"], languageOptions: { globals: globals.browser } },
+    tseslint.configs.recommended,
+    { files: ["**/*.js"], rules: { "@typescript-eslint/no-require-imports": "off" } },
+]);

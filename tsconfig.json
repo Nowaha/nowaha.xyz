@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./out/public/js",
+
+        "target": "ES2022",
+        "module": "ES2022",
+
+        "types": [],
+
+        "strict": true
+    },
+    "exclude": ["eslint.config.mjs"]
+}
