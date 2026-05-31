@@ -3,5 +3,12 @@
     "version": "1.0.0",
     "main": "index.js",
     "author": "noah@nowaha.xyz",
-    "license": "MIT"
+    "license": "MIT",
+    "scripts": {
+        "format": "prettier --config .prettierrc --write .",
+        "format:check": "prettier --config .prettierrc --check ."
+    },
+    "devDependencies": {
+        "prettier": "^3.8.3"
+    }
 }
