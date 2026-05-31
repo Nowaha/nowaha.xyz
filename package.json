@@ -9,16 +9,20 @@
         "format": "prettier --config .prettierrc --write .",
         "format:check": "prettier --config .prettierrc --check .",
         "build:static": "node scripts/build-static.js",
+        "watch:static": "node scripts/build-static.js --watch",
         "build:ts": "tsc",
-        "watch:static": "node scripts/build-static.js --watch"
+        "build:css": "npx @tailwindcss/cli -i ./public/css/index.css -o ./out/public/css/index.css",
+        "watch:css": "npx @tailwindcss/cli -i ./public/css/index.css -o ./out/public/css/index.css --watch"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
+        "@tailwindcss/cli": "^4.3.0",
         "chokidar": "^5.0.0",
         "eslint": "^10.4.1",
         "globals": "^17.6.0",
         "prettier": "^3.8.3",
         "rimraf": "^6.1.3",
+        "tailwindcss": "^4.3.0",
         "typescript": "^6.0.3",
         "typescript-eslint": "^8.60.0"
     }
